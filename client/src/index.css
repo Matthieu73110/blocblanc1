@@ -1,0 +1,142 @@
+:root {
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #1a1a1a;
+  --secondary-color: #646cff;
+  --accent-color: #535bf2;
+  --background-color-dark: #242424;
+  --background-color-light: #ffffff;
+  --text-color-dark: rgba(255, 255, 255, 0.87);
+  --text-color-light: #213547;
+  --border-color: #ccc;
+  --button-background: #007bff;
+  --button-hover: #0056b3;
+  --button-text: #fff;
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--text-color-dark);
+  background-color: var(--background-color-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+h3{
+  color: var(--secondary-color);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--accent-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: var(--primary-color);
+  }
+
+  button:hover {
+    background-color: #e1e1e1;
+  }
+}
+
+.form-container {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: var(--background-color-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+.form-container button {
+  padding: 12px;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+.form-container button:hover {
+  background-color: var(--button-hover);
+}
